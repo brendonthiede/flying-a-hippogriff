@@ -20,7 +20,7 @@
   var foodPoints = 300;
   var speed = 300;
   var enemySpeed = 75;
-  var secondsPerLevel = 5;
+  var secondsPerLevel = 120;
 
   function preload () {
     //set background color of canvas
