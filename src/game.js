@@ -10,9 +10,7 @@
   var food;
   var enemy;
   var cursors;
-  var scoreText;
   var timeInSeconds;
-  var timeText;
   var timer;
   var score = 0;
   var foodRegenerationMinDelay = 2500;
@@ -43,7 +41,6 @@
     createEnemy();
 
     //place score text on the screen
-    scoreText = game.add.text(5, 3, score);
     initializeTimer();
   }
 
@@ -153,14 +150,12 @@
 
   function initializeTimer () {
     timeInSeconds = secondsPerLevel;
-    timeText = game.add.text(220, 30, getFormattedTime(timeInSeconds), { font: '30px Arial', fill: '#000000', align: 'center' });
-    timeText.anchor.set(0.5, 0.5);
     timer = game.time.events.loop(Phaser.Timer.SECOND, updateTimer);
   }
 
   function updateTimer () {
     timeInSeconds--;
-    timeText.text = getFormattedTime(timeInSeconds);
+    document.querySelector('#time').textContent = getFormattedTime(timeInSeconds);
 
     if (timeInSeconds === 0) {
       game.state.stop();
@@ -185,7 +180,7 @@
     food.kill();
     //update the score
     score = score + foodPoints;
-    scoreText.text = score;
+    document.querySelector('#score').textContent = score;
 
     var foodRegenerationDelay = Math.floor(Math.random() * (foodRegenerationMaxDelay - foodRegenerationMinDelay + 1)) + foodRegenerationMinDelay;
 
@@ -196,6 +191,6 @@
   function hitEnemy (player, enemy) {
     //update the score
     score--;
-    scoreText.text = score;
+    document.querySelector('#score').textContent = score;
   }
 })();
