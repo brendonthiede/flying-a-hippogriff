@@ -26,9 +26,7 @@ module.exports = {
   },
   plugins: [
     new CopyWebpackPlugin([{ from: 'src/assets/', to: 'assets/' }]),
-    new CopyWebpackPlugin([{ from: 'src/index.html', to: 'index.html' }]),
-    new CopyWebpackPlugin([{ from: '_config.yml', to: '_config.yml' }]),
-    new CopyWebpackPlugin([{ from: 'README.md', to: 'README.md' }])
+    new CopyWebpackPlugin([{ from: 'src/index.html', to: 'index.html' }])
   ],
   devServer: {
     contentBase: path.resolve(__dirname, './dist/'),
