@@ -14,6 +14,6 @@ To give the game levels, it was decided to give a count down of 1 minute for eac
 
 ## Resources
 
-Tutorial based on TypeScript and Webpack: [Learn to create a HTML5 Game in 5 Minutes](https://medium.com/@digit.sensitivee/learn-to-create-a-html5-game-in-5-minutes-604118f5d0ab)
-Using TypeScript with Github Pages: [How to Build TypeScript App and Deploy it on GitHub Pages](https://zubialevich.blogspot.com/2018/09/how-to-build-typescript-github-pages-app.html)
-TypeScript definitions for Phaser 3: [phaser.d.ts](https://github.com/photonstorm/phaser3-docs/tree/master/typescript/phaser.d.ts)
+* Tutorial based on TypeScript and Webpack: [Learn to create a HTML5 Game in 5 Minutes](https://medium.com/@digit.sensitivee/learn-to-create-a-html5-game-in-5-minutes-604118f5d0ab)
+* Using TypeScript with Github Pages: [How to Build TypeScript App and Deploy it on GitHub Pages](https://zubialevich.blogspot.com/2018/09/how-to-build-typescript-github-pages-app.html)
+* TypeScript definitions for Phaser 3: [phaser.d.ts](https://github.com/photonstorm/phaser3-docs/tree/master/typescript/phaser.d.ts)
