@@ -1,11 +1,9 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 
 <head>
   <meta charset="utf-8" />
   <title>Flying a Hippogriff</title>
-  <script src="lib/phaser.min.js"></script>
-  <script src="game.js"></script>
   <style>
     body {
       font: normal 18pt "Helvetica Neue", Helvetica, sans-serif;
@@ -21,6 +19,7 @@
       display: inline-block;
     }
   </style>
+  <script src="dist/bundle.js"></script>
 </head>
 
 <body>
@@ -31,13 +30,14 @@
     </span>
     <span class="hud-item">
       <label for="time">Time Remaining:</label>
-      <span id="time">00:00</span>
+      <span id="time">02:00</span>
     </span>
     <span class="hud-item">
       <label for="level">Level:</label>
       <span id="level">1</span>
     </span>
   </div>
+  <div id="game-canvas"></div>
 </body>
 
 </html>

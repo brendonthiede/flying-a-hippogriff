@@ -1,0 +1,32 @@
+{
+  "name": "flying-a-hippogriff",
+  "version": "1.0.0",
+  "description": "You can find the game here: [Flying a Hippogriff](https://brendonthiede.github.io/flying-a-hippogriff/src/index.html)",
+  "main": "index.html",
+  "scripts": {
+    "start": "webpack --mode development && webpack-dev-server --mode development",
+    "build": "webpack --mode production && webpack-dev-server --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brendonthiede/flying-a-hippogriff.git"
+  },
+  "author": "brendonthiede",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brendonthiede/flying-a-hippogriff/issues"
+  },
+  "homepage": "https://github.com/brendonthiede/flying-a-hippogriff#readme",
+  "devDependencies": {
+    "expose-loader": "0.7.5",
+    "ts-loader": "5.3.3",
+    "typescript": "3.2.4",
+    "webpack": "4.29.0",
+    "webpack-cli": "3.2.1",
+    "webpack-dev-server": "3.1.14"
+  },
+  "dependencies": {
+    "ajv": "^6.8.1",
+    "phaser": "^3.16.1"
+  }
+}
