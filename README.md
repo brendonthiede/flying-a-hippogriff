@@ -2,7 +2,7 @@
 
 ## Playing the Game
 
-You can find the game here: [Flying a Hippogriff](https://brendonthiede.github.io/flying-a-hippogriff/src/index.html)
+You can find the game here: [Flying a Hippogriff](https://brendonthiede.github.io/flying-a-hippogriff/index.html)
 
 ## Phase 1
 
