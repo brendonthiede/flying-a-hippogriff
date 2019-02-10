@@ -19,9 +19,9 @@ export class Main extends Phaser.Scene {
   }
 
   preload(): void {
-    this.load.image('hippogriff', '/src/assets/hippogriff.png');
-    this.load.image('dementor', '/src/assets/dementor.png');
-    this.load.image('food', '/src/assets/sunshine.png');
+    this.load.image('hippogriff', 'assets/hippogriff.png');
+    this.load.image('dementor', 'assets/dementor.png');
+    this.load.image('food', 'assets/sunshine.png');
   }
 
   create(): void {
