@@ -97,7 +97,7 @@ export class Main extends Phaser.Scene {
           food.enableBody(false, food.x, food.y, true, true);
         },
         callbackScope: this,
-        loop: true
+        loop: false
       });  
     }
   }
