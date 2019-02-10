@@ -5,7 +5,7 @@
   "main": "index.html",
   "scripts": {
     "start": "webpack --mode development && webpack-dev-server --mode development",
-    "build": "webpack --mode production && webpack-dev-server --mode production"
+    "build": "webpack --mode production"
   },
   "repository": {
     "type": "git",
@@ -18,12 +18,14 @@
   },
   "homepage": "https://github.com/brendonthiede/flying-a-hippogriff#readme",
   "devDependencies": {
-    "expose-loader": "0.7.5",
-    "ts-loader": "5.3.3",
-    "typescript": "3.2.4",
-    "webpack": "4.29.0",
-    "webpack-cli": "3.2.1",
-    "webpack-dev-server": "3.1.14"
+    "copy-webpack-plugin": "^4.6.0",
+    "expose-loader": "^0.7.5",
+    "file-loader": "^3.0.1",
+    "ts-loader": "^5.3.3",
+    "typescript": "^3.3.3",
+    "webpack": "^4.29.3",
+    "webpack-cli": "^3.2.3",
+    "webpack-dev-server": "^3.1.14"
   },
   "dependencies": {
     "phaser": "^3.16.1"
