@@ -1,14 +1,15 @@
 import { Hippogriff } from "../objects/hippogriff";
 import { Dementor } from "../objects/Dementor";
 
-export class Main extends Phaser.Scene {
+export class MainScene extends Phaser.Scene {
   private player: Hippogriff;
   private enemy: Dementor;
   private food: Phaser.Physics.Arcade.Group;
+  private isPaused: boolean;
 
   constructor() {
     super({
-      key: "GameScene"
+      key: "MainScene"
     });
   }
 
@@ -16,6 +17,7 @@ export class Main extends Phaser.Scene {
     this.registry.set("score", 0);
     this.updatePoints();
     this.registry.set("time", 120);
+    this.isPaused = false;
   }
 
   preload(): void {
@@ -42,6 +44,11 @@ export class Main extends Phaser.Scene {
       callbackScope: this,
       loop: true
     });
+
+    // allow outside access to some actions
+    window['mainScene'] = this;
+    window['togglePauseState'] = this.togglePauseState;
+    window['restartGame'] = this.restartGame;
   }
 
   update(): void {
@@ -52,6 +59,21 @@ export class Main extends Phaser.Scene {
         this.incrementPoints(-1);
       }
     }
+  }
+
+  private togglePauseState(): void {
+    const mainScene: MainScene = window['mainScene'];
+    if (mainScene.isPaused) {
+      mainScene.scene.resume();
+      mainScene.isPaused = false;
+    } else {
+      mainScene.scene.pause();
+      mainScene.isPaused = true;
+    }
+  }
+
+  private restartGame(): void {
+    window['mainScene'].scene.restart();
   }
 
   private decrementTime(): void {
@@ -94,7 +116,7 @@ export class Main extends Phaser.Scene {
         },
         callbackScope: this,
         loop: false
-      });  
+      });
     }
   }
 
