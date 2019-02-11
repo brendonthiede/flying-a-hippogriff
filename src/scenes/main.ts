@@ -51,10 +51,6 @@ export class Main extends Phaser.Scene {
       if (Phaser.Geom.Intersects.RectangleToRectangle(this.player.getBounds(), this.enemy.getBounds())) {
         this.incrementPoints(-1);
       }
-    } else {
-      if (this.player.y > this.sys.canvas.height) {
-        this.scene.restart();
-      }
     }
   }
 
