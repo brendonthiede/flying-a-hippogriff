@@ -1,11 +1,11 @@
 import "phaser";
-import { Main } from "./scenes/main";
+import { MainScene } from "./scenes/mainScene";
 
 const config: GameConfig = {
   width: 1400,
   height: 600,
   parent: "game-canvas",
-  scene: Main,
+  scene: MainScene,
   input: {
     keyboard: true
   },
@@ -23,4 +23,5 @@ export class Game extends Phaser.Game {
 
 window.addEventListener("load", () => {
   let game = new Game(config);
+  window['game'] = game;
 });
