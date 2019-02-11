@@ -4,21 +4,7 @@
 <head>
   <meta charset="utf-8" />
   <title>Flying a Hippogriff</title>
-  <style>
-    body {
-      font: normal 18pt "Helvetica Neue", Helvetica, sans-serif;
-    }
-
-    #hud {
-      margin-bottom: 1em;
-    }
-
-    .hud-item {
-      width: 300px;
-      margin-left: 5em;
-      display: inline-block;
-    }
-  </style>
+  <link rel="stylesheet" type="text/css" media="screen" href="assets/main.css">
   <script src="bundle.js"></script>
 </head>
 
@@ -35,6 +21,14 @@
     <span class="hud-item">
       <label for="level">Level:</label>
       <span id="level">1</span>
+    </span>
+  </div>
+  <div id='game-controls'>
+    <span class="hud-item">
+      <button id="pause" onclick="togglePauseState()">Pause</button>
+    </span>
+    <span class="hud-item">
+      <button id="restart" onclick="restartGame()">Restart</button>
     </span>
   </div>
   <div id="game-canvas"></div>

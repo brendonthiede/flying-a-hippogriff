@@ -1,0 +1,13 @@
+body {
+  font: normal 18pt "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.hud-item {
+  width: 300px;
+  margin-left: 5em;
+  display: inline-block;
+}
+
+#game-controls {
+  margin-bottom: 1em;
+}
