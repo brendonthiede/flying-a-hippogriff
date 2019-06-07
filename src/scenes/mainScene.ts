@@ -15,6 +15,7 @@ export class MainScene extends Phaser.Scene {
 
   init(): void {
     this.registry.set("score", 0);
+    this.registry.set("level", 1);
     this.updatePoints();
     this.registry.set("time", 120);
     this.isPaused = false;
@@ -103,6 +104,24 @@ export class MainScene extends Phaser.Scene {
 
   private updatePoints(): void {
     document.getElementById('score').textContent = this.registry.values.score;
+    const calculatedLevel = Math.floor(this.registry.values.score / 1000) + 1;
+    if (calculatedLevel > this.registry.values.level) {
+      this.registry.values.level = calculatedLevel;
+      if (this.registry.values.levelText) {
+        this.registry.values.levelText.destroy();
+      }
+      this.registry.set("levelText", this.add.text(220, 110, `You leveled up to level ${calculatedLevel}`, { font: '48px Courier', fill: '#000000' }));
+      document.getElementById('level').textContent = this.registry.values.level;
+      // set delay to then remove the text
+      this.time.addEvent({
+        delay: 2500,
+        callback: function () {
+          this.registry.values.levelText.destroy();
+        },
+        callbackScope: this,
+        loop: false
+      });
+    }
   }
 
   private eatFood(player: Hippogriff, food: Phaser.Physics.Arcade.Sprite): void {

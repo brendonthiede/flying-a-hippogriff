@@ -1,11 +1,15 @@
 import "phaser";
 import { MainScene } from "./scenes/mainScene";
+import { LevelUpScene } from "./scenes/LevelUpScene";
 
 const config: GameConfig = {
   width: 1400,
   height: 600,
   parent: "game-canvas",
-  scene: MainScene,
+  scene: [MainScene, LevelUpScene],
+  render: {
+    transparent: true
+  },
   input: {
     keyboard: true
   },
