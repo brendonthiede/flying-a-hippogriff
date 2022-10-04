@@ -17,21 +17,17 @@ module.exports = {
         test: /\.ts$/,
         loader: 'ts-loader',
         exclude: '/node_modules/'
-      },
-      {
-        test: /phaser\.js$/,
-        loader: 'expose-loader?Phaser'
       }
     ]
   },
   plugins: [
-    new CopyWebpackPlugin([{ from: 'src/assets/', to: 'assets/' }]),
-    new CopyWebpackPlugin([{ from: 'src/index.html', to: 'index.html' }])
+    new CopyWebpackPlugin({ patterns: [{ from: 'src/assets/', to: 'assets/' }] }),
+    new CopyWebpackPlugin({ patterns: [{ from: 'src/index.html', to: 'index.html' }] })
   ],
   devServer: {
-    contentBase: path.resolve(__dirname, './dist/'),
-    publicPath: '/',
-    host: 'localhost',
+    static: {
+      directory: path.join(__dirname, 'dist'),
+    },
     port: 8975,
     open: true
   },

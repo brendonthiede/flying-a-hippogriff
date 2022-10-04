@@ -1,7 +1,7 @@
 export class Hippogriff extends Phaser.Physics.Arcade.Sprite {
   private SPEED: number = 300;
   private SPRITE_SCALE: number = .25;
-  private cursors: Phaser.Input.Keyboard.CursorKeys;
+  private cursors: Phaser.Types.Input.Keyboard.CursorKeys;
   public isAlive: boolean;
 
   constructor(scene: Phaser.Scene, x: number, y: number) {
