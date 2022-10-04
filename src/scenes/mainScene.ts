@@ -110,7 +110,7 @@ export class MainScene extends Phaser.Scene {
       if (this.registry.values.levelText) {
         this.registry.values.levelText.destroy();
       }
-      this.registry.set("levelText", this.add.text(220, 110, `You leveled up to level ${calculatedLevel}`, { font: '48px Courier', fill: '#000000' }));
+      this.registry.set("levelText", this.add.text(220, 110, `You leveled up to level ${calculatedLevel}`, { fontSize: '48px', fontFamily: 'Courier', color: '#000000' }));
       document.getElementById('level').textContent = this.registry.values.level;
       // set delay to then remove the text
       this.time.addEvent({
