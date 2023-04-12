@@ -1,0 +1,16 @@
+{
+  "version": "1.0.0",
+  "name": "flying-a-hippogriff",
+  "dependencies": {
+    "flying-a-hippogriff": {
+      "version": "1.0.0",
+      "resolved": "file:..",
+      "overridden": false
+    },
+    "phaser": {
+      "version": "3.55.2",
+      "resolved": "https://registry.npmjs.org/phaser/-/phaser-3.55.2.tgz",
+      "overridden": false
+    }
+  }
+}

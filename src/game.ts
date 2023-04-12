@@ -1,6 +1,6 @@
 import "phaser";
 import { MainScene } from "./scenes/mainScene";
-import { LevelUpScene } from "./scenes/LevelUpScene";
+import { LevelUpScene } from "./scenes/levelUpScene";
 
 const config: Phaser.Types.Core.GameConfig = {
   width: 1400,
