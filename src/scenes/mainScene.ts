@@ -1,5 +1,5 @@
 import { Hippogriff } from "../objects/hippogriff";
-import { Dementor } from "../objects/Dementor";
+import { Dementor } from "../objects/dementor";
 
 export class MainScene extends Phaser.Scene {
   private player: Hippogriff;
